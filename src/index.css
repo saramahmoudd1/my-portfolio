@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #080b14;
+  color: #f8fafc;
+}
+::selection { background: rgba(129, 140, 248, .35); }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(148,163,184,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.glass {
+  background: rgba(15, 23, 42, .58);
+  border: 1px solid rgba(148, 163, 184, .12);
+  backdrop-filter: blur(18px);
+}
+.reveal { animation: reveal .8s ease both; }
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.float { animation: float 5s ease-in-out infinite; }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
