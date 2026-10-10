@@ -13,7 +13,7 @@ const projects = [
       "A computer-vision and GenAI application that classifies chest X-ray images and provides an interactive medical-information chatbot.",
     tags: ["PyTorch", "ResNet18", "LangChain", "Chroma", "Streamlit"],
     github: "https://github.com/saramahmoudd1/Lung-Disease-AI-Assistant",
-    image: "/projects/lung_disease.PNG",
+    image: `${import.meta.env.BASE_URL}projects/lung_disease.PNG`,
     accent: "from-indigo-500/20 to-cyan-500/10",
     icon: "🫁"
   },
@@ -101,7 +101,14 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-400">View projects <ArrowUpRight size={17} /></a>
             <a href="https://github.com/saramahmoudd1" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-bold text-slate-200 transition hover:border-white/25"><Github size={17} /> GitHub</a>
-            <a href="/Sara_Elsharkawy_CV.pdf" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-bold text-slate-200 transition hover:border-white/25"><Download size={17} /> CV</a>
+            <a
+              href={`${import.meta.env.BASE_URL}Sara_Elsharkawy_CV.pdf`}
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-bold text-slate-200 transition hover:border-white/25"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download size={17} /> CV
+            </a>
           </div>
           <div className="mt-8 flex items-center gap-4 text-sm text-slate-500">
             <span>Python</span><span>•</span><span>PyTorch</span><span>•</span><span>Generative AI</span><span>•</span><span>AWS</span>
@@ -113,7 +120,7 @@ function Hero() {
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-indigo-500/20 blur-2xl" />
             <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900">
               <img
-                src="/profile.jpeg"
+                src={`${import.meta.env.BASE_URL}profile.jpeg`}
                 alt="Sara Elsharkawy"
                 className="h-full w-full object-cover"
               />
